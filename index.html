@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="images/logo.png">
+  <title>Az elektromágneses hullámok</title>
+  <link href="style3.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./style/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <style>
+    body {
+      background: linear-gradient(180deg, #38050F 0%, #580818 25%, #6E0A1E 50%, #580818 75%,#38050F 100%);
+      /*background: linear-gradient(180deg, rgb(77, 0, 19) 0%, rgb(119, 67, 0) 25%, #6E0A1E 50%, #580818 75%,#38050F 100%);*/
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div id="up"></div>
+<header>
+  <a href="accessibility.html" title="Akadály mentesített verzió"><svg id="bal" class="igazitas2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-universal-access" viewBox="0 0 16 16">
+    <path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM6 5.5l-4.535-.442A.531.531 0 0 1 1.531 4H14.47a.531.531 0 0 1 .066 1.058L10 5.5V9l.452 6.42a.535.535 0 0 1-1.053.174L8.243 9.97c-.064-.252-.422-.252-.486 0l-1.156 5.624a.535.535 0 0 1-1.053-.174L6 9V5.5Z"/>
+  </svg></a>
+  <div class="container">
+    <h2><span></span></h2>
+    <nav>
+      
+    </nav>
+    <button id="fogomb" class="hamburger">
+      <div class="bar"></div>
+    </button>
+  </div>
+</header>
+<nav class="mobile-nav">
+  <br>
+<a href="#start" id="gomb1"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+  <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z"/>
+</svg> Bevezető</a>
+
+<a href="#szog" id="gomb2"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+  <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+</svg> Kölcsönhatások</a>
+
+<a href="#history" id="gomb3"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+  <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+  <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+</svg> Hőmérséklet</a>
+
+<a href="#gyaks2" id="gomb4"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z"/>
+</svg> Rádióhullámok</a>
+
+<a href="#gyaks3" id="gomb5"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+  <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+</svg> Története</a>
+
+<a href="#gyaks4" id="gomb6" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+  <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg> Spektrum</a>
+</nav>
+
+
+  <!--fejlec
+
+ <header>
+            
+            <div class="wrapper">
+                
+                
+
+            </div>
+   <a href="accessibility.html" title="accessibility version"><svg id="bal" class="igazitas2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-universal-access" viewBox="0 0 16 16">
+  <path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM6 5.5l-4.535-.442A.531.531 0 0 1 1.531 4H14.47a.531.531 0 0 1 .066 1.058L10 5.5V9l.452 6.42a.535.535 0 0 1-1.053.174L8.243 9.97c-.064-.252-.422-.252-.486 0l-1.156 5.624a.535.535 0 0 1-1.053-.174L6 9V5.5Z"/>
+</svg></a>
+            <a href="#general" title="General things"><svg class="igazitas" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="white" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+</svg></a>
+                    <a href="#eating" title="Eating habits"><svg class="igazitas" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cup-hot-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5Z"/>
+  <path d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z"/>
+</svg></a>
+                    <a href="#party" title="Parade"><svg class="igazitas" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-balloon-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.48 10.901C11.211 10.227 13 7.837 13 5A5 5 0 0 0 3 5c0 2.837 1.789 5.227 4.52 5.901l-.244.487a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2.376 2.376 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.244-.487ZM4.352 3.356a4.004 4.004 0 0 1 3.15-2.325C7.774.997 8 1.224 8 1.5c0 .276-.226.496-.498.542-.95.162-1.749.78-2.173 1.617a.595.595 0 0 1-.52.341c-.346 0-.599-.329-.457-.644Z"/>
+</svg></a>
+   <a href="#tv" title="Media"><svg class="igazitas" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-tv-fill" viewBox="0 0 16 16">
+  <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM2 2h12s2 0 2 2v6s0 2-2 2H2s-2 0-2-2V4s0-2 2-2z"/>
+</svg></a>
+    <a href="#present" title="A popular gift"><svg class="igazitas" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-gift-fill" viewBox="0 0 16 16">
+  <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z"/>
+</svg></a>
+    <a href="#weather" title="Weather"><svg class="igazitas" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cloud-snow-fill" viewBox="0 0 16 16">
+  <path d="M2.625 11.5a.25.25 0 0 1 .25.25v.57l.501-.287a.25.25 0 0 1 .248.434l-.495.283.495.283a.25.25 0 0 1-.248.434l-.501-.286v.569a.25.25 0 1 1-.5 0v-.57l-.501.287a.25.25 0 0 1-.248-.434l.495-.283-.495-.283a.25.25 0 0 1 .248-.434l.501.286v-.569a.25.25 0 0 1 .25-.25zm2.75 2a.25.25 0 0 1 .25.25v.57l.5-.287a.25.25 0 0 1 .249.434l-.495.283.495.283a.25.25 0 0 1-.248.434l-.501-.286v.569a.25.25 0 1 1-.5 0v-.57l-.501.287a.25.25 0 0 1-.248-.434l.495-.283-.495-.283a.25.25 0 0 1 .248-.434l.501.286v-.569a.25.25 0 0 1 .25-.25zm5.5 0a.25.25 0 0 1 .25.25v.57l.5-.287a.25.25 0 0 1 .249.434l-.495.283.495.283a.25.25 0 0 1-.248.434l-.501-.286v.569a.25.25 0 0 1-.5 0v-.57l-.501.287a.25.25 0 0 1-.248-.434l.495-.283-.495-.283a.25.25 0 0 1 .248-.434l.501.286v-.569a.25.25 0 0 1 .25-.25zm-2.75-2a.25.25 0 0 1 .25.25v.57l.5-.287a.25.25 0 0 1 .249.434l-.495.283.495.283a.25.25 0 0 1-.248.434l-.501-.286v.569a.25.25 0 1 1-.5 0v-.57l-.501.287a.25.25 0 0 1-.248-.434l.495-.283-.495-.283a.25.25 0 0 1 .248-.434l.501.286v-.569a.25.25 0 0 1 .25-.25zm5.5 0a.25.25 0 0 1 .25.25v.57l.5-.287a.25.25 0 0 1 .249.434l-.495.283.495.283a.25.25 0 0 1-.248.434l-.501-.286v.569a.25.25 0 0 1-.5 0v-.57l-.501.287a.25.25 0 1 1-.248-.434l.495-.283-.495-.283a.25.25 0 0 1 .248-.434l.501.286v-.569a.25.25 0 0 1 .25-.25zm-.22-7.223a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10.25H13a3 3 0 0 0 .405-5.973z"/>
+</svg></a>
+                </div>
+                </header>
+                <br> -->
+                
+                
+
+         <br>
+  
+        <br>
+        <br>
+  
+
+    
+    
+    
+                    <a href="#up"><button id="felGomb" title="A weblap tetejére">Fel</button></a>
+   
+    
+  <!--fejlec-->
+  
+  <h1 class="text-center udvozollek">Az elektromágneses hullámok</h1>
+  <div id="start"></div>
+  <br>
+  <br>
+  <div class="container szoveg">
+    <div class="row">
+      <!-- class="row align-items-center" középre igazitás függőlegesen-->
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 kontener">
+
+        <div class="sorkizart text-star">
+        <h1 class="text-center">Bevezető <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+          <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z"/>
+        </svg></h1> <br>
+        <p> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+          <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z"/>
+        </svg> Már több mint 100 éve ismerjük az elektromágneses hullámokat. A XX. század elején felfedezték azt is, hogy elektromágneses hullámokkal jeleket (információt) továbbíthatunk. A szikratávírót mára felváltotta a távközlési műholdak és a mobiltelefon-hálózatok bonyolult rendszere. A háztartási eszközeinkben vagy a „radarkontroll” felirat mögött is az elektromágneses hullámok rejtőznek. Sőt a klímaváltozásban szerepet játszó üvegházhatás is az elektromágneses hullámok közé tartozó infravörös sugárzás tulajdonságainak következménye.</p>
+          
+    
+</div>
+          <img class="myImages cicoma center" id="myImg" src="images/blue.jpg" alt="Már több mint 100 éve ismerjük az elektromágneses hullámokat...." width="90%" height="auto">
+          <br>
+           <br>
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+            <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z"/>
+          </svg> Az elektromágneses hullámok mindenütt jelen vannak a környezetünkben. Ilyen a látható fény, de ezenkívül még nagyon sok más elektromágneses hullám – más néven elektromágneses sugárzás – vesz körül bennünket. Ezeket gyakorlati okokból a levegőben mérhető hullámhosszuk alapján csoportosítjuk.
+Az alábbi táblázatban rendszerezve látjuk az elnevezéseket és a hozzájuk tartozó hullámhosszakat:</p> 
+
+<table class="table table-striped table-dark cumi">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Hullámhossz levegőben	</th>
+      <th scope="col">Elnevezés	</th>
+      <th scope="col">Felhasználás</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>méter, kilométer</td>
+      <td>rádióhullámok</td>
+      <td>rádióadások továbbítása</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>centiméter</td>
+      <td>mikrohullámok</td>
+      <td>mikrohullámú sütő, mobiltelefon</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>tized-ezred milliméter</td>
+      <td>infravörös hullámok, hősugárzás</td>
+      <td>melegítés, távirányítók</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>néhány száz nanométer</td>
+      <td>látható fény, ultraibolya sugárzás</td>
+      <td>látás, szolárium</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>pikométer</td>
+      <td>röntgensugarak, gammasugarak</td>
+      <td>röntgenátvilágítás, anyagvizsgálat</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>pikométernél kisebb</td>
+      <td>kozmikus sugárzás</td>
+      <td>nagyenergiájú fizikai kutatások</td>
+    </tr>
+  </tbody>
+</table>
+
+          <p>
+           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+            <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z"/>
+          </svg> A nanométer 10<sup>–9</sup> m-t, a pikométer 10<sup>–12</sup> m-t jelent.</p>
+           
+
+           <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast-pin" viewBox="0 0 16 16">
+            <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8z"/>
+          </svg> Az elektromágneses hullámok egyik fontos tulajdonsága, hogy nagy sebességgel haladnak a térben vagy az elektromos vezetékek, kábelek mentén. Ezért használjuk őket üzenetek, adatok, képek, hangok gyors továbbítására, például a rádió, a televízió és a telefon használata során.</p>
+<img class="myImages cicoma center" id="myImg" src="images/elektro.png" alt="Az elektromágneses hullám" width="25%" height="auto"><br>
+       
+         
+
+         
+          
+
+        
+
+        
+
+
+
+
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 kontener69">
+        
+<!----------------------------------------------------------------------------------------------------->
+        
+        <div class="sorkizart text-center"><div id="szog">
+          <h1 class="text-center">Az elektromágneses hullámok kölcsönhatása az anyaggal <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+            <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+          </svg>
+          </h1> <br>
+           
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+          <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+        </svg> Ha elektromágneses hullámok új anyaghoz érnek, részben visszaverődnek a felületről, részben behatolnak az új anyagba, ahol általában megváltozott sebességgel és irányban haladnak tovább. Terjedésük során erősségük csökken, energiájuk egy részét átadják a környezetükben lévő atomoknak, molekuláknak.</p><br>  
+        <p class="sorkizart">  
+        </p>
+        <hr>
+        <p> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+          <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+        </svg> Az elektromágneses hullámok és az anyag kölcsönhatása sok tényezőtől függ. Az egyik legfontosabb ilyen tényező a hullám frekvenciája. Egy másik lényeges tényező az anyag felépítése, elektronszerkezete, mert ez dönti el, hogy adott frekvenciájú sugárzásból adott idő alatt mennyi nyelődik el egy anyagban.</p>
+        <p> <div id="nap_fold"><img class="myImages cicoma center" id="myImg" src="images/frek.jpg" alt="Elektromágneses hullám frekvencia" width="90%" height="auto"> 
+        <br></p></div>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+          <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+        </svg> A fény általában visszaverődik a szilárd tárgyak felületéről, de a mikrohullámok segítségével akár a föld alá vagy a falak mögé is benézhetünk. A technikai alkalmazások egyik nagy csoportját a különféle célra kifejlesztett radarok, képalkotó eszközök jelentik.<br>  <br>  
+       
+</p>
+</div>
+<hr>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+  <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+</svg> Hogyan lép kölcsönhatásba az elektromágneses hullám az anyaggal? Az anyag atomokból épül fel. Az atomokban töltött részecskék, pozitív töltésű protonok és negatív töltésű elektronok vannak. Amikor az elektromágneses hullámok anyagba ütköznek, a bennük változó elektromágneses mező kölcsönhatásba lép az anyagban lévő töltött részecskékkel, erőt fejt ki azokra, energiát ad át nekik.
+  </p>
+  <br>
+  <img class="myImages cicoma center" id="myImg" src="images/hali.png" alt="Elektromágneses hullám frekvencia" width="90%" height="auto">
+  <br>
+  <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
+    <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707zm2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708zm5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708zm2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+  </svg> Az elektromágneses hullám erőt fejt ki az anyag töltött részecskéire. A fény leginkább az atomok közötti kémiai kötést létesítő vegyérték-elektronoknak adja át energiáját.</p>
+   <div id="history"></div>
+      </div>
+     
+    </div></div>
+    
+    <br>
+<div class="container szoveg">
+    <div class="row">
+
+     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 kontener6">
+
+<!----------------------------------------------------------------------------------------------------->
+
+       <h1 class="text-center">Hőmérsékleti sugárzás <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+        <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+        <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+      </svg></h1>
+       <br>
+        <div class="sorkizart text-start">
+
+          <img class="myImages cicoma center" id="myImg" src="images/micro.png" alt="Mikrohullám sütő" width="90%" height="auto">
+          <br>
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+            <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+            <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+          </svg> Minden test elektromágneses sugárzást bocsát ki, amelynek jellemző frekvenciája szoros kapcsolatban van a test hőmérsékletével. Ezért hőmérsékleti sugárzásnak is nevezik. A melegvérű élőlények hőmérsékleti sugárzása jellemzően infravörös sugárzás.</p> 
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-thermometer-high" viewBox="0 0 16 16">
+            <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585a1.5 1.5 0 0 1 1 1.415z"/>
+            <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+          </svg> Az egész világmindenséget egyenletes elektromágneses háttérsugárzás tölti ki, amely 2,725 K értékű hőmérsékleti sugárzás. Az ősrobbanáskor igen forró univerzum mostanra ennyire hűlt le tágulása következtében. A világűrből nagy energiájú gamma-sugárzás is érkezik a Földre, ami például atomok, részecskék ütközésekor keletkezik, de érkezik a kozmoszból rádiósugárzás is.</p>
+              
+           </div>
+      </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 kontener5">
+
+<!----------------------------------------------------------------------------------------------------->
+
+       <h1 class="text-center">Rádióhullámok <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z"/>
+      </svg></h1>
+      <div id="gyaks2">
+        <div class="sorkizart text-start">
+         <p> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z"/>
+        </svg> A rádióhullámok, az infravörös sugárzás, a mikrohullámok, a röntgensugárzás, az ultraibolya sugarak ugyanolyan elektromágneses hullámok, mint a fény, csak más a frekvenciájuk, és így a hullámhosszuk is. A hullámhosszot a periódusidő (ami a frekvencia reciproka) és a terjedési sebesség szorzata adja meg. A nagyobb frekvenciájú elektromágneses hul­lámok adott idő alatt általában több energiát adnak át az anyagnak, mint a kisebb frekvenciájúak.
+
+        Az elektromágneses hullámok az anyag töltött részecskéivel lépnek kölcsönhatásba. </p>
+         <br>
+
+         <img class="myImages cicoma center" id="myImg" src="images/spektrum.jpg" alt="Mikrohullám sütő" width="90%" height="auto">
+          
+
+
+           </div>
+      </div>
+      
+       </div>
+      </div>
+</div>
+           <div id="gyaks3"></div>
+
+<br>
+     
+    <div class="container szoveg">
+    <div class="row">
+
+     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 kontener3">
+
+<!----------------------------------------------------------------------------------------------------->
+ 
+       <h1 class="text-center">Megismerésének története <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+        <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+      </svg></h1>
+        <div class="sorkizart text-start">
+        <p> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+          <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+        </svg> Az elektromágneses hullámok elméletét James Clerk Maxwell (1831 – 1878) skót fizikus dolgozta ki 1873-ban. A „Tanulmány az elektromos és mágneses térről” című munkájában közzétett Maxwell-egyenletek megjósolták az elektromágneses hullámok létezését. Az elmélet magában foglalta a nagyon rövid ill. nagyon hosszú hullámhosszak létezését, az elektromágneses hullámoknak nincs felső ill. alsó hullámhosszhatára. Ezzel a feltételezéssel Maxwell olyan elektromágneses sugárzások létére következtetett, amelyeket csak a halála után fedeztek fel. A Maxwell-egyenletek helyességét Heinrich Hertz bizonyította be a szikragenerátorral végzett kísérletei alapján. </p>
+         <img class="myImages cicoma center" id="myImg" src="images/james.jpeg" alt="James Clerk Maxwell (1831 – 1878)" width="50%" height="auto">
+          <br>
+           <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+            <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+          </svg> William Herschel (1738 – 1822) német csillagász észrevette, hogy a kísérleteiben használt fényforrás hőmérséklet-változást idéz elő. Ezzel felfedezte az infravörös (angol rövidítéssel: IR, azaz „infrared”) hősugarakat. (Egy villanykörte a sugárzásának 90%-át ebben a tartományban bocsátja ki.)
+</p>
+<img class="myImages cicoma center" id="myImg" src="images/william.jpeg" alt="William Herschel (1738 – 1822)" width="50%" height="auto">
+          <br>
+          
+          
+
+           </div>
+      
+      </div>
+      
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 kontener4">
+
+<!----------------------------------------------------------------------------------------------------->
+<div id="gyaks4"></div>
+       <h1 class="text-center">Az elektromágneses spektrum <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+      </svg></h1>
+        <div class="sorkizart text-start">
+          <p> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+            <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg> A rádióhullámokat hullámhosszuk szerint csoportosítjuk: megkülönböztetünk hosszúhullámokat (650 m – 10 km), középhullámokat (180 m – 650 m), rövidhullámokat (10 m – 180 m), ultrarövidhullámokat (10 cm – 10 m), deciméteres, centiméteres és milliméteres hullámokat, valamint mikrohullámokat (300 µm – 30 cm). A hosszú-, rövid- és középhullámokat a rádiótechnikában használják, az ultrarövidhullámokat egyaránt alkalmazza a rádiós és a televíziós kommunikáció, valamint a radartechnika (a mikrohullámok mellett). A mágnesesrezonancia-tomográfiában (MRI) ultrarövid és deciméteres hullámokat használnak, a mobiltávközlés ugyancsak deciméteres hullámhossztartományban történik. Mikrohullámokat alkalmaznak gyógyászati célokra is, ugyanis a szövetek belső melegítése, a vérellátás fokozása jótékony hatású bizonyos mozgásszervi megbetegedéseknél. A mikrohullámú sütőben a dipólusos molekulákat (pl. víz) a változó elektromágneses mező forgásra kényszeríti, és a forgásuk során fellépő dielektromos veszteségek miatt hő fejlődik. A mikrohullámú sütőben kialakuló állóhullámok csomópontjaiban nincs molekuláris forgás, ezért forgótányér nélkül néhány centiméterenként változnának a hideg és meleg pontok az ételben.</p>
+           
+            
+             <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+              <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg> A látható fény olyan elektromágneses sugárzás, amely 380 nm és 780 nm közötti hullámhosszával az infravörös és az ultraibolya sugárzások tartományai közé esik. A fényt – mint bármely elektromágneses hullámot – három alapvető jellemzője határozza meg. A fényintenzitás az elektromos és mágneses térerősség-komponensek amplitúdójával van összefüggésben, és az emberi szem fényerőként, fényességként érzékeli. A fény frekvenciája vagy hullámhossza határozza meg a fény színét. A fény polarizációján a rezgés irányát értjük, amelyet az emberi szem normál körülmények között nem érzékel. A fény polarizálhatósága arra bizonyíték, hogy az elektromágneses sugárzás transzverzális hullám.
+  </p>
+
+
+           </div>
+      </div>
+       </div>
+      </div>
+    
+
+    <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+    <script src="barokkos.js"></script>
+    <script src="hamburger.js"></script>
+    <script src="clickk_figyelo.js"></script>
+    <br>
+    <footer>
+    <div class="feher text-center">
+      <p>Forrás: <a class="feher" href="https://www.nkp.hu/tankonyv/fizika_10_nat2020/lecke_05_026" target="_blank">elmélet</a> , <a class="feher" href="http://eta.bibl.u-szeged.hu/2173/2/az_elektromgneses_spektrum.html" target="_blank">spektrum</a> , <a class="feher" href="https://hu.wikipedia.org/wiki/Elektrom%C3%A1gneses_sug%C3%A1rz%C3%A1s" target="_blank">wiki</a>
+        <br>
+        Készítette: <a class="feher" href="https://github.com/loczylevi" target="_blank">Lóczy Levente Attila</a>
+        <br>
+        <a class="feher" href="https://github.com/loczylevi/szangol_project_new_zealand" target="_blank">Publikáltam</a> a <a class="feher" href="https://pages.github.com/" target="_blank">GitHub Pages</a> segítségével
+        <br>
+        Képek:  <a class="feher" href="https://www.publicdomainpictures.net/hu/view-image.php?image=114113&picture=blue-abstract" target="_blank">Hullám</a> <a class="feher" href="https://commons.wikimedia.org/wiki/File:Electromagnetic-Spectrum.png" target="_blank">Spektrum</a> <a class="feher" href="https://www.flickr.com/photos/agathman/5428089105" target="_blank">Elektromágneses</a> <a class="feher" href="https://commons.wikimedia.org/wiki/File:Electromagnetic_waves.png" target="_blank">Hullám 2</a>  <a class="feher" href="https://www.explainthatstuff.com/microwaveovens.html" target="_blank">Mikró</a> <a class="feher" href="https://commons.wikimedia.org/wiki/File:Spectral_sensitivity_curves_of_human_photoreceptors.jpg" target="_blank">hullám 3</a> <a class="feher" href="https://www.flickr.com/photos/itupictures/16459386878" target="_blank">James Clerk</a> <a class="feher" href="https://www.flickr.com/photos/tonynetone/6347892169" target="_blank">Wiliam Herschel</a>
+      </p>
+      </div>
+</footer>
+</body>
+
+</html>
+
+
+
+
